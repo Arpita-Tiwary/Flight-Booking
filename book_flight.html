@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking System</title>
+    <link rel="stylesheet" href="book_flight.css"> <!-- Link to CSS file -->
+    <script src="book_flight.js" defer></script> <!-- Link to JS file -->
+</head>
+<body>
+    <h1>Flight Booking System</h1>
+
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Airline Reservation</a>
+        <div class="navbar-nav">
+            <a class="nav-item" href="/home_user/home.html">Home</a>
+            <a class="nav-item" href="/currence_convertor/Currency.html">Currency Converter</a>
+            <a class="nav-item" href="/Travel Advisory/advisory.html">Prepare & Travel</a>
+            <a class="nav-item" href="/contact-us/src/main/resources/static/contact-Us.html">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Flight Search Form -->
+    <form id="flight-search-form">
+        <div class="form-group">
+            <label for="departure">Departure:</label>
+            <input type="text" id="departure" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="flight-date">Flight Date:</label>
+            <input type="date" id="flight-date" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Search Flights</button>
+    </form>
+
+    <!-- Flights List Display -->
+    <div id="flights-list"></div>
+
+    <!-- Booking Form -->
+    <form id="booking-form" style="display:none;" onsubmit="event.preventDefault(); bookFlight();">
+        <h2>Book Flight</h2>
+        <input type="hidden" id="selected-flight-id">
+        <div class="form-group">
+            <label for="user-name">Name:</label>
+            <input type="text" id="user-name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="user-email">Email:</label>
+            <input type="email" id="user-email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="user-contact">Contact Number:</label>
+            <input type="text" id="user-contact" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Book Flight</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Airline Reservation System</p>
+    </footer>
+
+</body>
+</html>
